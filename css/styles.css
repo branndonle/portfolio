@@ -76,9 +76,9 @@ section {
     min-height:100vh;
     padding: 10rem 12% 10rem;
 }
+ 
 .home {
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
     gap: 15rem;
@@ -252,7 +252,7 @@ span {
     }
     81%, 
     100%{
-        content: "Frontend Designer!";
+        content: "Frontend Designer";
     }
 }
 
