@@ -76,9 +76,9 @@ section {
     min-height:100vh;
     padding: 10rem 12% 10rem;
 }
- 
 .home {
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     gap: 15rem;
@@ -236,19 +236,20 @@ span {
 @keyframes words {
     0%,
     20%{
-        content: "Frontend Designer!";
+        content: "Frontend Designer";
     }
     21%,
     40%{
-        content: "Web Developer!";
+        content: "Web Developer";
     }
     41%, 
     60% {
-        content: "Frontend Designer!";
+        content: "Frontend Designer";
+
     }
     61%,
     80% {
-        content: "Web Developer!";
+        content: "Web Developer";
     }
     81%, 
     100%{
