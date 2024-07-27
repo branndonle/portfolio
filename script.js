@@ -1,14 +1,24 @@
-let mybutton = document.getElementById("topButton");
-window.onscroll = function() {scrollFunction()};
+let menuIcon = document.querySelector('#menu-icon');
+let navBar = document.querySelector(".navbar");
+let sections = document.querySelector("section");
+let navLinks = document.querySelector("header nav a");
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+window.onscroll = () => {
+  sections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
+
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach(links => {
+        links.classList.remove('active');
+        document.querySelector("header nav a [href*=" + id + "]").classList.add('active');
+      })
+    }
+  })
 }
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle('bx-x');
+  navBar.classList.toggle('active');
 }
